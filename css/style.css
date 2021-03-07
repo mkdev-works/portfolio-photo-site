@@ -1,0 +1,200 @@
+@charset "utf-8";
+/****************************************
+ 全体
+ ****************************************/
+
+/* 全要素の余白をリセット */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #626262;
+    font-size: 14px;
+}
+
+div.container {
+    padding: 0px 70px;
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+}
+
+/**********
+ 小画面対応
+ **********/
+@media screen and (max-width:700px) {
+    div.container {
+        padding: 10px;
+    }
+}
+
+/****************************************
+ ヘッダ部
+ ****************************************/
+
+header {
+    margin: 70px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* サイトロゴ */
+
+/* サイトタイトル： Inconsolata Regular  30pt #000000 */
+
+header .site-logo h1 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: #000000;
+}
+
+/* ナビ */
+
+/* メニュー： Times New Roman Regular 14pt  */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav li {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 95px;
+}
+
+header nav li a {
+    color: #626262;
+    text-decoration: none;
+}
+
+/**********
+ 小画面対応
+ **********/
+@media screen and (max-width:700px) {
+    header {
+        margin: 20px 0px;
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 30px;
+    }
+    header nav li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/****************************************
+ メイン部
+ ****************************************/
+
+/* トップ画像 */
+
+main .top-img img {
+    width: 100%;
+}
+
+/* トップ文章 */
+
+main .introduction {
+    margin: 80px 80px;
+    /* border:1px solid red; */
+}
+
+/* 写真表示部 */
+
+main .photos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+}
+
+main .photos .photo-container {
+    max-width: 50%;
+}
+
+main .photos article {
+    padding: 30px;
+    margin-bottom: 70px;
+    /* border:1px solid blue; */
+}
+
+/* 記事のスタイル */
+
+/* category-name :ubuntu 14pt #b4ad9e */
+
+main article .category-name {
+    font-family: 'ubuntu';
+    color: #b4ad9e;
+    margin-bottom: 25px;
+}
+
+main article img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* h2: 源ノ明朝, 30pt, regular  */
+
+main article h2 {
+    font-family: "源ノ明朝";
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* p : 小塚ゴシック Pr6N 14pt */
+
+main article p {
+    font-family: '小塚ゴシック Pr6N', '小塚ゴシック Pro', 'Kozuka Gothic Pro', sans-serif;
+    line-height: 2em;
+}
+
+main .photos article p {
+    line-height: 1.7em;
+}
+
+/**********
+ 小画面対応
+ **********/
+@media screen and (max-width:700px) {
+    main .introduction {
+        margin: 20px 20px;
+    }
+    main .photos {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    main .photos .photo-container {
+        max-width: 100%;
+    }
+    main article h2{
+        font-size:20px;
+    }
+}
+
+/****************************************
+ フッター部
+ ****************************************/
+
+/* footer :14pt Times New Roman #333333 */
+
+footer {
+    text-align: center;
+    padding: 30px;
+}
+
+footer .copyright {
+    color: #333333;
+    font-family: 'Times New Roman', Times, serif;
+}
